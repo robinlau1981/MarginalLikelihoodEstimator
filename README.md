@@ -30,7 +30,7 @@ Reference:
 The code here shows an example application of our algorithm AAIS for multimodal posterior sampling and marginal likelihood estimation.
 The target likelihood function is an outer product of 7 univariate distributions as below
 
-(1) 3/5*G(10+x|2,3)+2/5*G(10-x|2,5);
+(1) 3/5 \times G(10+x|2,3)+2/5*G(10-x|2,5);
 
 (2) 3/4*skN(x|3,1,5)+1/4*skN(x|-3,3,-6);
 
