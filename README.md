@@ -1,5 +1,5 @@
 # MarginalLikelihoodEstimator
-Matlab code for the adaptive annealed importance sampling based marginal likelihood estimator
+Matlab code for the adaptive annealed importance sampling based marginal likelihood estimator, reported in https://iopscience.iop.org/article/10.1088/0067-0049/213/1/14 .
 
 This is a version of the adaptive annealed importance sampler (AAIS) [3] designed for user-friendliness. Below is a brief introduction to the algorithm's background, followed by instructions on how to use the code.
 
