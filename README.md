@@ -44,7 +44,7 @@ The target likelihood function is an outer product of 7 univariate distributions
 
 (7) 1/8 * N(x|-10,0.1)+1/4 * N(x|0,0.15)+5/8 * N(x|7,0.2),
 
-where G denotes the gamma distribution, skN the skew-normal distribution, B the beta distribution, and e the exponential distribution. The 2nd dimension has two modes bracketing a deep ravine, the 4th dimension has one low, broad mode that overlaps a second sharper mode, and the 7th dimension has 3 distinct, well-separated modes. Only the 5th dimension is symmetric. There is a range of tail behaviors as well, from Gaussian to heavy-tailed. This likelihood function was first used in [4], then used in [2][3].
+where G denotes the gamma distribution, skN the skew-normal distribution, B the beta distribution, and e the exponential distribution. This function was first designed in [4], then adopted in [2][3].
 
 In the code here, AAIS is used to estimate the marliginal likelihood (i.e., model evidence), which is an integral of the above likelihood function over the parameter space.  Just run 'main.m' to see the results.
 
