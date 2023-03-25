@@ -9,9 +9,9 @@ Code developer：Bin Liu;
 
 Algorithm contributor: Bin Liu, Jim Berger (Duke University), Tom Loredo (Cornell University), Merlise Clyde (Duke University)
 
-The initial version of the algorithm was developed in 2009 by Bin during his postdoctoral work at the Department of Statistical Science, Duke University, under the support of NSF Grant AST-0507481. Its development was motivated by a challenging computational problem, namely marginal likelihood estimation, in the field of exoplanet detection, detailed in [1]. Tom introduced Bin to the astrophysical background; Jim and Merlise introduced previous efforts related to this problem. Jim provided valuable insights through many collaborative discussions. He also contributed a crucial idea to the algorithm: adding new mixture components at the sample with the biggest importance weight. Bin devised techniques for combining the annealing strategy with adaptive importance sampling and mixture modeling, with the added feature of adjusting the number of mixing components adaptively. In summary, the initial version of this algorithm is the result of close collaboration between Bin, Jim, Tom, and Merlise.
+The initial version of the algorithm was developed in 2009 by Bin during his postdoctoral work at the Department of Statistical Science, Duke University, under the support of NSF Grant AST-0507481. Its development was motivated by a challenging computational problem, namely marginal likelihood estimation, in the field of exoplanet detection, detailed in [1]. Tom introduced Bin to the astrophysical background; Jim, Tom, and Merlise introduced previous efforts related to this problem, especially the work [4]. Jim provided valuable insights through many collaborative discussions. He also contributed a crucial idea to the algorithm: adding new mixture components at the sample with the biggest importance weight. Bin devised techniques for combining the annealing strategy with adaptive importance sampling and mixture modeling, with the added feature of adjusting the number of mixing components adaptively. In summary, the initial version of this algorithm is the result of close collaboration between Bin, Jim, Tom, and Merlise.
 
-Bin initially presented the algorithm in an invited talk titled 'Adaptive T-mixture Importance Sampling Method' at the Transition Workshop of a year-long project called Sequential Monte Carlo (SMC) Methodology , hosted by the Statistical and Applied Mathematical Sciences Institute (SAMSI), on November 9-10, 2009. Tom later provided a brief introduction to the algorithm, then called annealed adaptive importance sampling, in one of his conference presentations in 2010 [2]. Preliminary simulation results for this algorithm were reported in [1]. Later, Bin made efforts in testing the algorithm on simulated and real datasets and improving it by solving some technical issues. Then, the final version of this algorithm, along with details on its applications to model selection and extrasolar planet detection, was published in [3].
+Bin initially presented the algorithm in an invited talk titled 'Adaptive T-mixture Importance Sampling Method' at the Transition Workshop of a year-long project called Sequential Monte Carlo (SMC) Methodology, hosted by the Statistical and Applied Mathematical Sciences Institute (SAMSI), on November 9-10, 2009. Tom later provided a brief introduction to the algorithm, then called annealed adaptive importance sampling, in one of his conference presentations in 2010 [2]. Preliminary simulation results for this algorithm were reported in [1]. Later, Bin made efforts in testing the algorithm on more simulated and especially real astro datasets and improving it by solving some technical issues. Then, the final version of the algorithm, along with details on how to use it for model selection and extrasolar planet detection, was published in [3].
 
 Reference:
 
@@ -20,6 +20,8 @@ Reference:
 [2] Loredo, T.J., Bayesian methods for exoplanet science: Planet detection, orbit estimation, and adaptive observing, ADA 6-Sixth Conference on Astronomical Data Analysis, May 6, 2010. https://www.researchgate.net/publication/230631076_Bayesian_methods_for_exoplanet_science_Planet_detection_orbit_estimation_and_adaptive_observing
 
 [3]  Liu, B., Adaptive Annealed Importance Sampling for Multimodal Posterior Exploration and Model Selection with Application to Extrasolar Planet Detection, The Astrophysical Journal Supplement Series, vol. 213, no.14, pp.1-16, 2014. doi:10.1088/0067-0049/213/1/14.
+
+[4] Crooks, J. L., Berger, J. O.,and Loredo, T. J., Posterior-Guided Importance Sampling for Calculating Marginal Likelihoods with Application to Bayesian Exoplanet Searches, Discussion Paper Series of Dept. of Statitical Science, 2007.
 
 %% -------------------  How to use this code ------------------- %%
 
@@ -45,8 +47,6 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 In the code here, AAIS is used to estimate the marliginal likelihood (i.e., model evidence), which is an integral of the above likelihood function over the parameter space.  Just run 'main.m' to see the results.
 
 You can replace the likelihood function used here with your own one. Then run the algorithm to get the corresponding estimation results (You likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your anneling schedule). 
-
-[4] Crooks, J. L., Berger, J. O.,and Loredo, T. J., Posterior-Guided Importance Sampling for Calculating Marginal Likelihoods with Application to Bayesian Exoplanet Searches, Discussion Paper Series of Dept. of Statitical Science, 2007.
 
 If you find this work useful, please kindly cite following papers:
 
