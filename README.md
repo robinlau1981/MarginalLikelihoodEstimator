@@ -48,7 +48,7 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 
 In the code here, AAIS is used to estimate the marliginal likelihood (i.e., model evidence), which is an integral of the above likelihood function over the parameter space.  Just run 'main.m' to see the results.
 
-You can replace the likelihood function used here with your own one. Then run the algorithm to get the corresponding estimation results (You likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your anneling schedule). 
+You can replace the likelihood function used here with your own one. Then run the algorithm to get the corresponding estimation results (You likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
 If you find this work useful, please kindly cite following papers:
 
