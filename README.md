@@ -30,19 +30,19 @@ Reference:
 The code here shows an example application of our algorithm AAIS for multimodal posterior sampling and marginal likelihood estimation.
 The target likelihood function is an outer product of 7 univariate distributions as below
 
-(1) 3/5 \times G(10+x|2,3)+2/5*G(10-x|2,5);
+(1) 3/5 * G(10+x|2,3)+2/5 * G(10-x|2,5);
 
-(2) 3/4*skN(x|3,1,5)+1/4*skN(x|-3,3,-6);
+(2) 3/4 * skN(x|3,1,5)+1/4 * skN(x|-3,3,-6);
 
 (3) S(x|0,9,4);
 
-(4) 1/2*B(x+3|3,3)+1/2*N(x|0,1);
+(4) 1/2 * B(x+3|3,3)+1/2 * N(x|0,1);
 
-(5) 1/2*e(x|1)+1/2*e(-x|1);
+(5) 1/2 * e(x|1)+1/2 * e(-x|1);
 
 (6) skN(x|0,8,-3);
 
-(7) 1/8*N(x|-10,0.1)+1/4*N(x|0,0.15)+5/8*N(x|7,0.2),
+(7) 1/8 * N(x|-10,0.1)+1/4 * N(x|0,0.15)+5/8 * N(x|7,0.2),
 
 where G denotes the gamma distribution, skN the skew-normal distribution, B the beta distribution, and e the exponential distribution. The 2nd dimension has two modes bracketing a deep ravine, the 4th dimension has one low, broad mode that overlaps a second sharper mode, and the 7th dimension has 3 distinct, well-separated modes. Only the 5th dimension is symmetric. There is a range of tail behaviors as well, from Gaussian to heavy-tailed. This likelihood function was first used in [4], then used in [2][3].
 
