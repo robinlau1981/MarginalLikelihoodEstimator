@@ -1,19 +1,19 @@
 # MarginalLikelihoodEstimator
 This is matlab code for the adaptive annealed importance sampling (AAIS) based marginal likelihood estimator, reported in [3] https://iopscience.iop.org/article/10.1088/0067-0049/213/1/14 .
 
-This is a version of the algorithm's code designed for user-friendliness. Another more complex version using the real astro model and real datasets can be found at: https://github.com/robinlau1981/AAIS .
+This is a version of the code designed for user-friendliness. Another more complex version using the real astro model and datasets can be found at: https://github.com/robinlau1981/AAIS .
 
-Below is a brief introduction to the algorithm's background, followed by instructions on how to use the code.
+Below is a brief introduction to the algorithm's background, followed by an instruction on how to use the code.
 
 %% -------------------  Background ------------------- %%
 
 Code developer：Bin Liu;   
 
-Algorithm contributor: Bin Liu, Jim Berger (Duke University), Tom Loredo (Cornell University), Merlise Clyde (Duke University)
+Algorithm contributors: Bin Liu, Jim Berger (Duke University), Tom Loredo (Cornell University), Merlise Clyde (Duke University)
 
-The initial version of the algorithm was developed in 2009 by Bin during his postdoctoral work at the Department of Statistical Science, Duke University, under the support of NSF Grant AST-0507481. Its development was motivated by a challenging computational problem, namely marginal likelihood estimation, in the field of exoplanet detection, detailed in [1]. Tom introduced Bin to the astrophysical background; Jim, Tom, and Merlise introduced previous efforts related to this problem, especially the work [4]. Jim provided valuable insights through many collaborative discussions. He also contributed a crucial idea to the algorithm: adding new mixture components at the sample with the biggest importance weight. Bin devised techniques for combining the annealing strategy with adaptive importance sampling and mixture modeling, with the added feature of adjusting the number of mixing components adaptively. In summary, the initial version of this algorithm is the result of close collaboration between Bin, Jim, Tom, and Merlise.
+The initial version of this algorithm was developed in 2009 by Bin during his postdoctoral work at the Department of Statistical Science, Duke University, under the support of NSF Grant AST-0507481. Its development was motivated by a challenging computational problem, namely marginal likelihood estimation, in the field of exoplanet detection, detailed in [1]. Tom introduced Bin to the astrophysical background; Jim, Tom, and Merlise introduced previous efforts that have been made related to this problem, especially [4]. Jim provided valuable insights through many collaborative discussions with Bin. He contributed a crucial idea to the algorithm: adding new mixture components at the sample with the biggest importance weight. Bin devised techniques for combining the annealing strategy with adaptive importance sampling and mixture modeling, with the added feature of adjusting the number of mixing components adaptively. In summary, the initial version of this algorithm is the result of close collaboration between Bin, Jim, Tom, and Merlise.
 
-Bin initially presented the algorithm in an invited talk titled 'Adaptive T-mixture Importance Sampling Method' at the Transition Workshop of a year-long project called Sequential Monte Carlo (SMC) Methodology, hosted by the Statistical and Applied Mathematical Sciences Institute (SAMSI), on November 9-10, 2009. Tom later provided a brief introduction to the algorithm, then called annealed adaptive importance sampling, in one of his conference presentations in 2010 [2]. Preliminary simulation results for this algorithm were reported in [1]. Later, Bin made efforts in testing the algorithm on more simulated and especially real astro datasets and improving it by solving some technical issues. Then, the final version of the algorithm, along with details on how to use it for model selection and extrasolar planet detection, was published in [3].
+Bin initially presented the algorithm in an invited talk titled 'Adaptive T-mixture Importance Sampling Method' at the Transition Workshop (on November 9-10, 2009), of a year-long project called Sequential Monte Carlo (SMC) Methodology hosted by the Statistical and Applied Mathematical Sciences Institute (SAMSI). Tom later provided a brief introduction to the algorithm, then called annealed adaptive importance sampling, in one of his conference presentations in 2010 [2]. Preliminary simulation results for this algorithm were reported in [1]. Later, Bin made efforts in testing the algorithm on more simulated and especially real astro datasets and improving it by solving some technical issues. The final version of the algorithm, along with details on how to use it for model selection and exoplanet detection, was published in [3].
 
 Reference:
 
@@ -27,8 +27,7 @@ Reference:
 
 %% -------------------  How to use this code ------------------- %%
 
-The code here shows an example application of our algorithm AAIS for multimodal posterior sampling and marginal likelihood estimation.
-The target likelihood function is an outer product of 7 univariate distributions as below
+The code released here shows an example application of the AAIS algorithm for multimodal posterior sampling and marginal likelihood estimation. The marliginal likelihood (i.e., model evidence) is defined to be an integral of a target likelihood function over its parameter space. The target likelihood function involved here is an outer product of 7 univariate distributions as below
 
 (1) 3/5 * G(10+x|2,3)+2/5 * G(10-x|2,5);
 
@@ -46,9 +45,7 @@ The target likelihood function is an outer product of 7 univariate distributions
 
 where G denotes the gamma distribution, skN the skew-normal distribution, B the beta distribution, and e the exponential distribution. This function was first designed in [4], then adopted in [2][3].
 
-In the code here, AAIS is used to estimate the marliginal likelihood (i.e., model evidence), which is an integral of the above likelihood function over the parameter space.  Just run 'main.m' to see the results.
-
-You can replace the likelihood function used here with your own one. Then run the algorithm to get the corresponding estimation results (You likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
+Just run 'main.m' to see the estimation results. You can replace the likelihood function used here with your own one. Then run 'main.m' to get the corresponding estimation results (you likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
 If you find this work useful, please kindly cite following papers:
 
