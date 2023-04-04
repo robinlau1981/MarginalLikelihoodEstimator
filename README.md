@@ -1,12 +1,11 @@
-# MarginalLikelihoodEstimator
-This is matlab code for the adaptive annealed importance sampling (AAIS) based marginal likelihood estimator, reported in [3] https://iopscience.iop.org/article/10.1088/0067-0049/213/1/14 .
+### Adaptive Annealed Importance Sampling (AAIS) based Marginal Likelihood Estimator
+This is matlab code for the AAIS algorithm reported in [3] https://iopscience.iop.org/article/10.1088/0067-0049/213/1/14 .
 
 This is a version of the code designed for user-friendliness. Another more complex version using the real astro model and datasets can be found at: https://github.com/robinlau1981/AAIS .
 
 Below is a brief introduction to the algorithm's background, followed by an instruction on how to use the code.
 
-%% -------------------  Background ------------------- %%
-
+###  Background
 Code developer：Bin Liu;   
 
 Algorithm contributors: Bin Liu, Jim Berger (Duke University), Tom Loredo (Cornell University), Merlise Clyde (Duke University)
@@ -25,8 +24,7 @@ Reference:
 
 [4] Crooks, J. L., Berger, J. O.,and Loredo, T. J., Posterior-Guided Importance Sampling for Calculating Marginal Likelihoods with Application to Bayesian Exoplanet Searches, Discussion Paper Series of Dept. of Statitical Science, Duke University, 2007.
 
-%% -------------------  How to use this code ------------------- %%
-
+###  How to use this code
 The code released here shows an example application of the AAIS algorithm for multimodal posterior sampling and marginal likelihood estimation. The marliginal likelihood (i.e., model evidence) is defined to be an integral of a target likelihood function over its parameter space. The target likelihood function involved here is an outer product of 7 univariate distributions as below
 
 (1) 3/5 * G(10+x|2,3)+2/5 * G(10-x|2,5);
@@ -47,7 +45,8 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 
 Just run 'main.m' to see the estimation results. You can replace the likelihood function used here with your own one. Then run 'main.m' to get the corresponding estimation results (you likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
-If you find this work useful, please kindly cite following papers:
+### Citation
+If you find this work useful, please kindly cite the following papers:
 
 @article{liu2014adaptive,
 
