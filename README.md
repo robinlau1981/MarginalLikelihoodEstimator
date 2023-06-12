@@ -46,44 +46,16 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 Just run 'main.m' to see the estimation results. You can replace the likelihood function used here with your own one. Then run 'main.m' to get the corresponding estimation results (you likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
 ### Citation
-If you find this work useful, please kindly cite the following papers:
-
+If you find this work useful, please kindly cite:
+```bibtex
 @article{liu2014adaptive,
-
   title={Adaptive annealed importance sampling for multimodal posterior exploration and model selection with application to extrasolar planet detection},
-  
   author={Liu, Bin},
-  
   journal={The Astrophysical Journal Supplement Series},
-  
   volume={213},
-  
   number={1},
-  
   pages={14},
-  
   year={2014},
-  
   publisher={IOP Publishing}
-  
 }
-
-@article{loredo2012bayesian,
-
-  title={Bayesian methods for analysis and adaptive scheduling of exoplanet observations},
-  
-  author={Loredo, Thomas J and Berger, James O and Chernoff, David F and Clyde, Merlise A and Liu, Bin},
-  
-  journal={Statistical Methodology},
-  
-  volume={9},
-  
-  number={1-2},
-  
-  pages={101--114},
-  
-  year={2012},
-  
-  publisher={Elsevier}
-  
-}
+```
