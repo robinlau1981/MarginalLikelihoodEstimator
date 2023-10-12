@@ -47,7 +47,7 @@ Just run 'main.m' to see the estimation results. You can replace the likelihood 
 
 ## Demonstrations:
 #### Our approach:
-<img src="3d_Helix.avi" width="600"/>
+<img src="3d_Helix.gif" width="600"/>
 
 ### Citation
 If you find this work useful, please kindly cite:
