@@ -27,8 +27,17 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 Just run 'main.m' to see the estimation results. You can replace the likelihood function used here with your own one. Then run 'main.m' to get the corresponding estimation results (you likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
 ## Demonstrations:
-#### Our approach:
+#### USe AAIS to sample from a three-dimensional flared helix function:
 <img src="3d_Helix.gif" width="600"/>
+
+The code is available at: http://dx.doi.org/10.13140/RG.2.2.25905.35683
+
+A code that demonstrates the utilization of AAIS to sample from a Rastrigin function, which is treated as an unnormalized target distribution, is available at: http://dx.doi.org/10.13140/RG.2.2.36182.22084.
+
+#### USe AAIS to sample from a mixture type target distribution:
+<img src="multiple_modes_stream.gif" width="600"/>
+#### USe AAIS to sample from a banana type target distribution:
+<img src="banana_stream.gif" width="600"/>
 
 ### Citation
 If you find this work useful, please kindly cite:
