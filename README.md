@@ -45,6 +45,10 @@ where G denotes the gamma distribution, skN the skew-normal distribution, B the 
 
 Just run 'main.m' to see the estimation results. You can replace the likelihood function used here with your own one. Then run 'main.m' to get the corresponding estimation results (you likely need to re-initialize the algorithm according to your problem setting, e.g., by specifying the dimension of your likelihood function, the sample size, the initial proposal function, your annealing schedule). 
 
+## Demonstrations:
+#### Our approach:
+<img src="3d_Helix.avi" width="600"/>
+
 ### Citation
 If you find this work useful, please kindly cite:
 ```bibtex
