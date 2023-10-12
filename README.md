@@ -29,6 +29,7 @@ Just run 'main.m' to see the estimation results. You can replace the likelihood 
 ## Demonstrations:
 #### USe AAIS to sample from a three-dimensional flared helix function:
 <img src="3d_Helix.gif" width="600"/>
+<img src="3d_helix_2D_mappling.gif" width="600"/>
 
 The code is available at: http://dx.doi.org/10.13140/RG.2.2.25905.35683
 
